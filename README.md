@@ -3,7 +3,7 @@
 This repository contains all simulation inputs, example trajectories, and analysis scripts used in the study  
 **_Sticky Interactions Govern Sequence-Dependent Dynamics in Biomolecular Condensates_**, which investigates the **monomer-level, chain-level, and macroscopic dynamics** of biomolecular condensates formed by glutamic acid (E) and lysine (K) sequences.
 
-This repository compiles simulation setups and analysis tools originally developed by **Dinesh S. Devarajan** and collaborators. The methodologies and data support the findings reported in:
+This repository compiles some simulation setups and analysis codes originally written by **Dinesh S. Devarajan** and collaborators. These codes were previously used in the study:
 
 > **Devarajan, D.S., Rekhi, S., Nikoubashman, A., Kim, Y.C., Howard, M.P., and Mittal, J.**  
 > _Sequence-dependent material properties of biomolecular condensates and their relation to dilute phase conformations_,  
