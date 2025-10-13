@@ -1,0 +1,1 @@
+This directory contains the initial and final trajectories, along with input scripts for running simulations of an example disordered protein sequence using the Martini 3 model. The simulations can be performed with publicly available software engines such as GROMACS.

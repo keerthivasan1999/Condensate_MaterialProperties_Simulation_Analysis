@@ -1,0 +1,6 @@
+Dumpfilename ./dumpTraj_long/dump.traj
+Start 24900000
+Stop 124850000
+Interval 50000
+NumberofMolecules 150
+NumberofAtomPerMolecules 200
