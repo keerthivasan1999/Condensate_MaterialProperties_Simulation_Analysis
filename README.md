@@ -20,4 +20,4 @@ The current version is provided to support the analyses presented in our followi
 Please cite these works if you use the codes provided here, either as-is or in modified form.
 
 For questions or clarifications, please contact:  
-Dr. Jeetain Mittal — [mittal@tamu.edu](mailto:mittal@tamu.edu)
+Dr. Jeetain Mittal — [jeetain@tamu.edu](mailto:jeetain@tamu.edu)
