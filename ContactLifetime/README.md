@@ -1,0 +1,57 @@
+### This python code calculates the following:
+
+1) Intermittent contact lifetimes between the oppositely charged residues, like charged residues, and all charged residues within an E-K sequence of a given nSCD in a file named "{SeqName}_ContactLifetimeACF.txt".
+
+Note that the "{SeqName}_ContactLifetimeACF.txt" will have 5 columns: The first column is the time in ps, the second column is time in ns, the third column is the raw ACF between oppositely charged residues, the fourth column is the normalized ACF (goes from 0 to 1) between oppositely charged residues, the fifth column is the raw ACF between like charged residues, the sixth column is the normalized ACF (goes from 0 to 1) between like charged residues, the seventh column is the raw ACF between all charged residues, and the eigth column is the normalized ACF (goes from 0 to 1) between all charged residues.
+
+The code was tested on version 3.9.7.
+
+---
+
+### Requirements
+
+This code comes with 4 files: (1) two .py files, (2) one .dat sequence file, (3) one .dat amino acid diameter file ("aminoacids_vdwdiameter.dat")
+
+---
+
+### Code usage
+
+Use the code on the GSD file (only a small file consisting of 15 trajectory stamps at specific timesteps are provided) given inside the folder GSDFile for testing. These trajectories were generated using HOOMD-blue (version 2.9.3). See "EKV3_CLifetimeACFArray.npy" and "EKV3_ContactLifetimeACF.txt" inside the "ExpectedOutput" folder for the output files that will be printed upon successful completion of the code based on the given instructions here. These output files were generated based on defining the number of chains of interest as "3" (see the below section for details). 
+
+---
+
+### Run the python code as below
+
+* python ninter_contactlifetimes.py GSDFile/ekv3_dumps.gsd GSDFile/ekv3_dumps.gsd 0 1 15 500 500 3 EKV3.dat EKV3
+
+In the above line, "ninter_contactlifetimes.py" corresponds to the .py filename; "GSDFile/ekv3_dumps.gsd" corresponds to the GSD (trajectory) file location; "GSDFile/ekv3_dumps.gsd" corresponds to the GSD (topology) file location; "0" corresponds to the starting frame index; "1" corresponds to the skipping (striding) between frames; "15" corresponds to the ending frame index; "500" corresponds to the interval timesteps between trajectories used in simulations; "500" corresponds to the total number of chains in the system; "3" corresponds to the number of chains of interest; "EKV3.dat" is the sequence filename (here EKV3 with nSCD = 0.033 is given as an example); "EKV3" is the sequence name to be used in the output filename.  
+
+Number of chains of interest means the number of chains that will be used as reference to compute rather than all chains in the system ~ typically it is the same as the total number of chains in the system. However, to quickly run the code and check the results, use a smaller number. If you use e.g., "3", the first 3 chains (according to GSD file indexing) will be picked and its ACF with all other chains in the system will be computed. If you use "500", all 500 chains in the system will be considered in the calculation, which should be the preferred option.
+
+Executing the above line will print a NUMPY file "{SeqName}_CLifetimeACFArray.npy" consisting of an array with the non-normalized (raw) autocorrelation function values after averaging over no. of pairs and no. of chains for each residue.
+ 
+* python IntermittentACF.py 0 1 15 500 EKV3.dat EKV3
+
+In the above line, "IntermittentACF.py" corresponds to the .py filename; "0" corresponds to the starting frame index; "1" corresponds to the skipping (striding) between frames; "15" corresponds to the ending frame index; "500" corresponds to the interval timesteps between trajectories used in simulations; "EKV3.dat" is the sequence filename (here EKV3 with nSCD = 0.033 if given as an example); "EKV3" is the sequence name to be used in the output filename. 
+
+Executing the above line will read the NUMPY file "{SeqName}_CLifetimeACFArray.npy" and give out the final output in a file named "{SeqName}_ContactLifetimeACF.txt". See above for the information contained in this file "{SeqName}_ContactLifetimeACF.txt".
+
+---
+
+### Author and Provenance
+
+This code was originally written by **Dinesh S. Devarajan** and was previously used in the study:
+
+> **Devarajan, D.S., Rekhi, S., Nikoubashman, A., Kim, Y.C., Howard, M.P., and Mittal, J.**  
+> _Sequence-dependent material properties of biomolecular condensates and their relation to dilute phase conformations_,  
+> **Nature Communications** (2024).  
+> [https://www.nature.com/articles/s41467-024-46223-w](https://www.nature.com/articles/s41467-024-46223-w)
+
+The current version is provided to support the analyses presented in our following manuscript on E–K sequence condensate dynamics:
+
+> **Muthukumar, K., Devarajan, D.S., Kim, Y.C., and Mittal, J.**  
+> _Sticky Interactions Govern Sequence-Dependent Dynamics in Biomolecular Condensates_,  
+> **bioRxiv** (2025).  
+> [https://doi.org/10.1101/2025.07.09.664001](https://doi.org/10.1101/2025.07.09.664001)
+
+Please cite these works if you use the codes provided here, either as-is or in modified form.
