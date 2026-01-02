@@ -18,7 +18,9 @@ Run the code as:
 python normal_modes.py -i <trajectory.gsd> -o <outfile.txt> -a <ampfile.txt> -t <sample_steps> -M <chain_length>
 
 ---
-This code was was previously used in the study:
+### Author and Provenance
+
+This code was previously used in the study:
 
 > **Sundaravadivelu Devarajan, D., Rekhi, S., Nikoubashman, A., Kim, Y.C., Howard, M.P., and Mittal, J.**  
 > _Effect of Charge Distribution on the Dynamics of Polyampholytic Disordered Proteins_,  
@@ -32,4 +34,8 @@ The current version is provided to support the analyses presented in our followi
 > **Proceedings of the National Academy of Sciences** (2026).  
 > [https://www.pnas.org/doi/10.1073/pnas.2518384122](https://www.pnas.org/doi/10.1073/pnas.2518384122)
 
+
+Please cite these works if you use the codes provided here, either as-is or in modified form.
+
 ---
+
