@@ -17,3 +17,19 @@ Run the code as:
 
 python normal_modes.py -i <trajectory.gsd> -o <outfile.txt> -a <ampfile.txt> -t <sample_steps> -M <chain_length>
 
+---
+This code was was previously used in the study:
+
+> **Sundaravadivelu Devarajan, D., Rekhi, S., Nikoubashman, A., Kim, Y.C., Howard, M.P., and Mittal, J.**  
+> _Effect of Charge Distribution on the Dynamics of Polyampholytic Disordered Proteins_,  
+> **Macromolecules** (2022).  
+> [https://pubs.acs.org/doi/full/10.1021/acs.macromol.2c01390](https://pubs.acs.org/doi/full/10.1021/acs.macromol.2c01390)
+
+The current version is provided to support the analyses presented in our following manuscript on E–K sequence condensate dynamics:
+
+> **Muthukumar, K., Sundaravadivelu Devarajan, D., Kim, Y.C., and Mittal, J.**  
+> _Sticky Interactions Govern Sequence-Dependent Dynamics in Biomolecular Condensates_,  
+> **Proceedings of the National Academy of Sciences** (2026).  
+> [https://www.pnas.org/doi/10.1073/pnas.2518384122](https://www.pnas.org/doi/10.1073/pnas.2518384122)
+
+---
