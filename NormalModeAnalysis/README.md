@@ -20,7 +20,7 @@ python normal_modes.py -i <trajectory.gsd> -o <outfile.txt> -a <ampfile.txt> -t 
 ---
 ### Author and Provenance
 
-This code was originally written by **Howard, M.P.** and was previously used in the study:
+This code was originally written by **Michael P. Howard** and was previously used in the study:
 
 > **Sundaravadivelu Devarajan, D., Rekhi, S., Nikoubashman, A., Kim, Y.C., Howard, M.P., and Mittal, J.**  
 > _Effect of Charge Distribution on the Dynamics of Polyampholytic Disordered Proteins_,  
@@ -38,5 +38,6 @@ The current version is provided to support the analyses presented in our followi
 Please cite these works if you use the codes provided here, either as-is or in modified form.
 
 ---
+
 
 
