@@ -55,10 +55,10 @@ This code was originally written by **Dinesh S. Devarajan** and was previously u
 
 The current version is provided to support the analyses presented in our following manuscript on E–K sequence condensate dynamics:
 
-> **Muthukumar, K., Sundaravadivelu Devarajan, D., Kim, Y.C., and Mittal, J.**   
+> **Muthukumar, K., Sundaravadivelu Devarajan, D., Kim, Y.C., and Mittal, J.**  
 > _Sticky Interactions Govern Sequence-Dependent Dynamics in Biomolecular Condensates_,  
-> **bioRxiv** (2025).  
-> [https://doi.org/10.1101/2025.07.09.664001](https://doi.org/10.1101/2025.07.09.664001)
+> **Proceedings of the National Academy of Sciences** (2026).  
+> [https://www.pnas.org/doi/10.1073/pnas.2518384122](https://www.pnas.org/doi/10.1073/pnas.2518384122)
 
 Please cite these works if you use the codes provided here, either as-is or in modified form.
 
@@ -67,4 +67,5 @@ Please cite these works if you use the codes provided here, either as-is or in m
 ### Other details
 
 This code performs moving averages over all trajectory frames and also averages over all atoms of interest selected based on the atom types provided in the parameter file.
+
 
